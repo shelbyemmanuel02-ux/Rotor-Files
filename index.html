@@ -1,0 +1,2621 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RotorFiles - Soma vitabu vya Emmanuel Brayson (Rotor Martin) bila malipo">
+    <meta name="keywords" content="vitabu, kusoma, Tanzania, Swahili, Emmanuel Brayson, Rotor Martin, RotorFiles">
+    <meta name="author" content="Emmanuel Brayson (Rotor Martin)">
+    <title>RotorFiles - Soma Vitabu Bila Malipo</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/XqKLKSQV/rotorfiles-logo.png">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="RotorFiles - Soma Vitabu Bila Malipo">
+    <meta property="og:description" content="Soma vitabu vya Emmanuel Brayson (Rotor Martin) bure kabisa">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.postimg.cc/XqKLKSQV/rotorfiles-logo.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "RotorFiles",
+        "description": "Jukwaa la kusoma vitabu bure",
+        "author": {
+            "@type": "Person",
+            "name": "Emmanuel Brayson",
+            "alternateName": "Rotor Martin"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #3b82f6;
+            --accent: #f59e0b;
+            --accent-dark: #d97706;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            --radius-sm: 0.375rem;
+            --radius: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.15s ease-in-out;
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+        }
+
+        /* ===== RESET & BASE STYLES ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--light);
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        h1 { font-size: var(--font-size-4xl); }
+        h2 { font-size: var(--font-size-3xl); }
+        h3 { font-size: var(--font-size-2xl); }
+        h4 { font-size: var(--font-size-xl); }
+        h5 { font-size: var(--font-size-lg); }
+        h6 { font-size: var(--font-size-base); }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ===== LAYOUT UTILITIES ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .container-sm {
+            max-width: 800px;
+        }
+
+        .container-lg {
+            max-width: 1400px;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-sm {
+            padding: 3rem 0;
+        }
+
+        .section-lg {
+            padding: 8rem 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+
+        /* ===== BUTTON COMPONENTS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            line-height: 1;
+            text-decoration: none;
+            border: 2px solid transparent;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: var(--accent);
+            color: var(--gray-900);
+            border-color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-dark);
+            border-color: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--gray-700);
+            border-color: transparent;
+        }
+
+        .btn-ghost:hover {
+            background: var(--gray-100);
+            color: var(--gray-900);
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+            border-color: var(--danger);
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+            border-color: #dc2626;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: var(--font-size-sm);
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: var(--font-size-lg);
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            padding: 0.5rem 0;
+            backdrop-filter: blur(10px);
+            background: rgba(37, 99, 235, 0.95);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: var(--font-size-xl);
+        }
+
+        .logo-image {
+            height: 3rem;
+            width: auto;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .logo:hover .logo-image {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+        }
+
+        .logo-sub {
+            font-size: var(--font-size-xs);
+            opacity: 0.9;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 1rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-nav.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+        }
+
+        .mobile-nav-link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .mobile-nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            padding-left: 1.5rem;
+        }
+
+        /* Auth Section */
+        .auth-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: var(--font-size-5xl);
+            margin-bottom: 1.5rem;
+            color: white;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-description {
+            font-size: var(--font-size-xl);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        /* ===== BOOKS SECTION ===== */
+        .books-section {
+            background: var(--light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: var(--font-size-4xl);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4rem;
+            height: 0.25rem;
+            background: var(--accent);
+            border-radius: 0.125rem;
+        }
+
+        .section-description {
+            font-size: var(--font-size-lg);
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .book-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 12rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-cover::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: var(--transition-slow);
+        }
+
+        .book-card:hover .book-cover::before {
+            left: 100%;
+        }
+
+        .book-title {
+            font-size: var(--font-size-xl);
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .book-author {
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+        }
+
+        .book-description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .book-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .book-pages {
+            font-size: var(--font-size-sm);
+            color: var(--gray-500);
+        }
+
+        .book-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: var(--accent);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .about-title {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .author-name {
+            color: var(--accent);
+            font-size: var(--font-size-2xl);
+            margin-bottom: 0.5rem;
+        }
+
+        .author-alias {
+            font-size: var(--font-size-lg);
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .author-quote {
+            font-style: italic;
+            opacity: 0.9;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--accent);
+        }
+
+        /* ===== SUPPORT SECTION ===== */
+        .support-section {
+            background: var(--gray-900);
+            color: white;
+        }
+
+        .support-section .section-title {
+            color: white;
+        }
+
+        .support-section .section-description {
+            color: var(--gray-300);
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .support-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .support-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .support-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .support-title {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .support-description {
+            color: var(--gray-300);
+            margin-bottom: 1.5rem;
+        }
+
+        .phone-number {
+            font-family: 'Courier New', monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--gray-200);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            margin: 1rem 0;
+            color: var(--gray-900);
+        }
+
+        /* ===== AUTH MODAL ===== */
+        .auth-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 1rem;
+        }
+
+        .auth-modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .auth-card {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            width: 100%;
+            max-width: 400px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        .auth-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray-500);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .auth-close:hover {
+            background: var(--gray-100);
+            color: var(--gray-700);
+        }
+
+        .auth-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: var(--font-size-sm);
+        }
+
+        .form-input {
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius);
+            font-size: var(--font-size-base);
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-input.error {
+            border-color: var(--danger);
+        }
+
+        .form-error {
+            color: var(--danger);
+            font-size: var(--font-size-sm);
+            display: none;
+        }
+
+        .form-error.show {
+            display: block;
+        }
+
+        .auth-switch {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--gray-600);
+        }
+
+        .auth-switch-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .auth-switch-btn:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ===== READER MODAL ===== */
+        .reader-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 3000;
+            display: none;
+            flex-direction: column;
+        }
+
+        .reader-modal.active {
+            display: flex;
+        }
+
+        .reader-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: var(--gray-100);
+            border-bottom: 1px solid var(--gray-300);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .reader-title {
+            color: var(--primary);
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+        }
+
+        .reader-content {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .reader-content h3 {
+            color: var(--primary);
+            margin: 2rem 0 1rem 0;
+            font-size: var(--font-size-2xl);
+        }
+
+        .reader-content h4 {
+            color: var(--primary-dark);
+            margin: 1.5rem 0 1rem 0;
+            font-size: var(--font-size-xl);
+        }
+
+        .reader-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .reader-content strong {
+            color: var(--gray-900);
+        }
+
+        .reader-content em {
+            color: var(--gray-600);
+        }
+
+        .reader-note {
+            background: var(--gray-100);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--accent);
+            margin: 2rem 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: var(--font-size-lg);
+        }
+
+        .footer-divider {
+            width: 4rem;
+            height: 2px;
+            background: var(--accent);
+            margin: 1.5rem auto;
+        }
+
+        .footer-info {
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-copyright {
+            color: var(--gray-500);
+            margin-top: 2rem;
+            font-size: var(--font-size-sm);
+        }
+
+        /* ===== TOAST NOTIFICATION ===== */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--gray-900);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            display: none;
+            align-items: center;
+            gap: 0.75rem;
+            z-index: 4000;
+            max-width: 400px;
+            animation: slideInRight 0.3s ease;
+        }
+
+        .toast.active {
+            display: flex;
+        }
+
+        .toast.success {
+            background: var(--success);
+        }
+
+        .toast.error {
+            background: var(--danger);
+        }
+
+        .toast.warning {
+            background: var(--warning);
+        }
+
+        .toast-icon {
+            font-size: 1.25rem;
+        }
+
+        .toast-message {
+            flex: 1;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0.25rem;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .toast-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ===== LOADING STATES ===== */
+        .loading {
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .btn.loading {
+            color: transparent;
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .hero-description {
+                font-size: var(--font-size-lg);
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: var(--font-size-2xl);
+            }
+
+            .auth-section {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .auth-card {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            .reader-header {
+                padding: 1rem;
+            }
+
+            .reader-content {
+                padding: 1rem;
+            }
+
+            .toast {
+                right: 1rem;
+                left: 1rem;
+                bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .book-card {
+                padding: 1.5rem;
+            }
+
+            .support-card,
+            .contact-card {
+                padding: 1.5rem;
+            }
+
+            .phone-number {
+                font-size: var(--font-size-lg);
+                padding: 0.75rem;
+            }
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .header,
+            .footer,
+            .auth-section,
+            .mobile-menu-btn {
+                display: none !important;
+            }
+
+            .hero,
+            .about-section,
+            .support-section,
+            .contact-section {
+                display: none !important;
+            }
+
+            .books-section {
+                padding: 0 !important;
+            }
+
+            .book-card {
+                break-inside: avoid;
+                box-shadow: none !important;
+                border: 1px solid #ccc !important;
+            }
+
+            .reader-modal {
+                position: static !important;
+                display: block !important;
+            }
+
+            .reader-header {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home" class="logo">
+                    <img src="https://i.postimg.cc/XqKLKSQV/rotorfiles-logo.png" alt="RotorFiles Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span class="logo-main">RotorFiles</span>
+                        <span class="logo-sub">BY ROTOR MARTIN</span>
+                    </div>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Nyumbani</a></li>
+                    <li><a href="#books" class="nav-link">Vitabu</a></li>
+                    <li><a href="#about" class="nav-link">Kuhusu</a></li>
+                    <li><a href="#support" class="nav-link">Support</a></li>
+                    <li><a href="#contact" class="nav-link">Wasiliana</a></li>
+                </ul>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Fungua menyu ya simu">
+                    ☰
+                </button>
+
+                <div class="auth-section">
+                    <div class="user-info" id="userInfo" style="display: none;">
+                        <span>👤</span>
+                        <span id="userEmail"></span>
+                        <button class="btn btn-danger btn-sm" onclick="logout()">Toka</button>
+                    </div>
+                    <div id="authButtons">
+                        <button class="btn btn-outline btn-sm" onclick="showAuthModal()">Ingia</button>
+                        <button class="btn btn-primary btn-sm" onclick="showAuthModal()">Jisajili</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link" onclick="closeMobileMenu()">Nyumbani</a></li>
+            <li><a href="#books" class="mobile-nav-link" onclick="closeMobileMenu()">Vitabu</a></li>
+            <li><a href="#about" class="mobile-nav-link" onclick="closeMobileMenu()">Kuhusu</a></li>
+            <li><a href="#support" class="mobile-nav-link" onclick="closeMobileMenu()">Support</a></li>
+            <li><a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Wasiliana</a></li>
+        </ul>
+    </div>
+
+   <section class="hero section" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">📚 Soma Vitabu Bila Malipo</h1>
+            <p class="hero-description">
+    “Every story deserves to be told.<br>
+    Every file holds a future.”
+</p>
+
+            
+            <div class="hero-actions">
+                <a href="#books" class="btn btn-primary btn-lg">Anza Kusoma Sasa</a>
+                <a href="#about" class="btn btn-outline btn-lg">Jua Zaidi</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Books Section -->
+    <section class="books-section section" id="books">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Vitabu Vyangu</h2>
+                <p class="section-description">
+                    Vitabu vyote vimeandikwa kwa makini na kwa lengo la kukupa mafunzo muhimu maishani
+                </p>
+            </div>
+
+            <div class="books-grid">
+                <!-- Book 1 -->
+                <article class="book-card">
+                    <div class="book-cover">🚗</div>
+                    <h3 class="book-title">Your Life as a Car</h3>
+                    <p class="book-author">Na: Emmanuel Brayson (Rotor Martin)</p>
+                    <p class="book-description">
+                        Uchambuzi wa kina wa maana ya maisha na mwendo wa kiroho. Kitabu kinachohamasisha 
+                        na kuelimisha kuhusu safari ya maisha na jinsi ya kuendesha maisha yako kwa usalama na mafanikio.
+                    </p>
+                    <div class="book-meta">
+                        <span class="book-pages">📖 Kurasa 85</span>
+                        <span class="book-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <button class="btn btn-primary btn-full" onclick="openBook(1)">
+                        📖 Soma Sasa
+                    </button>
+                </article>
+
+                <!-- Book 2 -->
+                <article class="book-card">
+                    <div class="book-cover">💪</div>
+                    <h3 class="book-title">Nguvu ya Kujizuia</h3>
+                    <p class="book-author">Na: Emmanuel Brayson (Rotor Martin)</p>
+                    <p class="book-description">
+                        Nguvu na hekima nyuma ya kujizuia. Kitabu cha kubuni tabia nzuri na kuleta mageuzi 
+                        makubwa maishani mwako. Jifunze jinsi ya kudhibiti matamanio na kufanya maamuzi bora.
+                    </p>
+                    <div class="book-meta">
+                        <span class="book-pages">📖 Kurasa 92</span>
+                        <span class="book-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <button class="btn btn-primary btn-full" onclick="openBook(2)">
+                        📖 Soma Sasa
+                    </button>
+                </article>
+
+                <!-- Book 3 -->
+                <article class="book-card">
+                    <div class="book-cover">🌟</div>
+                    <h3 class="book-title">Kitabu cha Tatu</h3>
+                    <p class="book-author">Na: Emmanuel Brayson (Rotor Martin)</p>
+                    <p class="book-description">
+                        Kitabu kipya kinachokuja hivi karibuni chenye mafunzo mazuri zaidi. Fuatilia kwa 
+                        karibu zaidi kwa habari za hivi punde. Kitabu kinachokusaidia kukua na kufanikiwa.
+                    </p>
+                    <div class="book-meta">
+                        <span class="book-pages">📖 Inakuja Hivi Karibuni</span>
+                        <span class="book-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <button class="btn btn-secondary btn-full" onclick="openBook(3)">
+                        🔔 Wasiliana Kujua Zaidi
+                    </button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Support Section -->
+<section class="support-section section" id="support">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Support the Author</h2>
+            <p class="section-description">
+                Your support helps bring more books, ideas, and free learning to the world.
+            </p>
+        </div>
+
+        <div class="support-grid">
+
+            <!-- International Support -->
+            <div class="support-card">
+                <div class="support-icon">🌍</div>
+                <h3 class="support-title">Support Globally</h3>
+                <p class="support-description">
+                    Partner with me in creating value, wisdom, and free resources for learners worldwide.
+                </p>
+                <a href="https://www.paypal.com/donate" target="_blank" class="btn btn-primary btn-full">
+                    💳 Donate via PayPal / Card
+                </a>
+                <p class="support-description small-text">
+                    (Secure – PayPal, Visa, MasterCard)
+                </p>
+            </div>
+
+            <!-- Local Support -->
+            <div class="support-card">
+                <div class="support-icon">💝</div>
+                <h3 class="support-title">Support Locally</h3>
+                <p class="support-description">
+                    Tanzania mobile donation:
+                </p>
+                <p class="support-description"><strong>Name:</strong> Emmanuel Brayson Mushi</p>
+                <p class="support-description"><strong>Mobile Pay:</strong> +255 650 222 824</p>
+            </div>
+
+            <!-- Share -->
+            <div class="support-card">
+                <div class="support-icon">📢</div>
+                <h3 class="support-title">Spread the Word</h3>
+                <p class="support-description">
+                    Share RotorFiles with learners, friends, dreamers, and thinkers.
+                </p>
+                <button class="btn btn-secondary btn-full" onclick="shareApp()">
+                    🔗 Share Now
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Book Me Section -->
+<section class="section" id="bookme">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Book Me for Speaking & Collaboration</h2>
+            <p class="section-description">
+                Available for keynote speaking, workshops, mentorship, spiritual coaching, educational consulting, and youth empowerment programs.
+            </p>
+        </div>
+
+        <div class="bookme-grid">
+            <div class="bookme-card">
+                <div class="bookme-icon">🎤</div>
+                <h3 class="bookme-title">Speaking & Keynotes</h3>
+                <p class="bookme-description">
+                    Conferences, schools, leadership forums, spiritual and emotional growth events.
+                </p>
+            </div>
+
+            <div class="bookme-card">
+                <div class="bookme-icon">🌱</div>
+                <h3 class="bookme-title">Mentorship & Coaching</h3>
+                <p class="bookme-description">
+                    One-on-one or group coaching – purpose, wisdom, relationships, youth development, spiritual clarity.
+                </p>
+            </div>
+
+            <div class="bookme-card">
+                <div class="bookme-icon">🤝</div>
+                <h3 class="bookme-title">Collaborations</h3>
+                <p class="bookme-description">
+                    Publishing, educational projects, digital learning solutions, content partnerships.
+                </p>
+            </div>
+        </div>
+
+        <div class="bookme-action">
+            <a href="#contact" class="btn btn-primary btn-lg">
+                📩 Request Booking
+            </a>
+        </div>
+    </div>
+</section>
+<!-- ===== Premium Author Banner ===== -->
+<section id="author-banner" class="section">
+  <div class="container">
+    <div class="author-banner" style="display:flex;align-items:center;gap:1.25rem;padding:1.25rem;border-radius:12px;background:linear-gradient(90deg,#ffffff,#f6f9ff);box-shadow:var(--shadow);">
+      <img src="https://i.postimg.cc/XqKLKSQV/rotorfiles-logo.png" alt="Emmanuel Brayson" style="width:96px;height:96px;border-radius:12px;object-fit:cover;">
+      <div style="flex:1;">
+        <h2 style="margin:0 0 0.25rem 0;font-size:1.25rem;">Emmanuel Brayson Mushi (Rotor Martin)</h2>
+        <p style="margin:0 0 0.5rem 0;color:var(--gray-600);">
+          Author, speaker & mentor — I write about spiritual wisdom, leadership and personal transformation.
+        </p>
+        <p style="margin:0;font-weight:600;color:var(--primary);">“Every file holds a future.”</p>
+      </div>
+      <div style="text-align:right;min-width:160px;">
+        <a href="#bookme" class="btn btn-primary">Request Booking</a>
+        <a href="#support" class="btn btn-outline" style="margin-top:0.5rem;display:inline-block;">Support</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Booking Request Form ===== -->
+<section id="booking-request" class="section">
+  <div class="container container-sm">
+    <div class="section-header">
+      <h2 class="section-title">Request Booking / Speaking</h2>
+      <p class="section-description">Fill the form — or send a quick message on WhatsApp. I’ll reply within 48 hours.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:1rem;max-width:800px;margin:0 auto;">
+      <form id="bookingForm" class="contact-card" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input type="text" id="bk_name" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" id="bk_email" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Organisation / Event</label>
+          <input type="text" id="bk_org" class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Type of Request</label>
+          <select id="bk_type" class="form-input">
+            <option>Keynote / Speech</option>
+            <option>Workshop</option>
+            <option>Mentorship / Coaching</option>
+            <option>Collaboration / Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Preferred date/time (optional)</label>
+          <input type="text" id="bk_datetime" class="form-input" placeholder="e.g. 2025-12-05 10:00 (EAT)">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Message / Details</label>
+          <textarea id="bk_message" class="form-input" rows="4" placeholder="Short brief for the event"></textarea>
+        </div>
+
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <button type="submit" class="btn btn-primary">Send Request</button>
+
+          <!-- WhatsApp quick message -->
+          <a id="whatsappQuick" href="#" target="_blank" class="btn btn-success" style="display:inline-flex;align-items:center;" >
+            💬 Message on WhatsApp
+          </a>
+
+          <!-- Create Google Calendar event link (user edits before saving) -->
+          <a id="createGcEvent" href="#" target="_blank" class="btn btn-outline">➕ Create Google Calendar Event</a>
+        </div>
+
+        <div id="bookingStatus" style="margin-top:0.75rem;display:none;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Google Calendar Embed (optional) ===== -->
+<section id="calendar" class="section section-sm">
+  <div class="container">
+    <div class="section-header">
+      <h3 class="section-title">Speaking Availability (Calendar)</h3>
+      <p class="section-description">If you prefer, propose a time using Google Calendar or use the form above.</p>
+    </div>
+
+    <div style="max-width:1000px;margin:0 auto;">
+      <!-- Replace CALENDAR_ID_HERE with your public Google Calendar ID; you can also paste iframe from your Google Calendar settings -->
+      <iframe id="gcalEmbed" src="https://calendar.google.com/calendar/embed?src=CALENDAR_ID_HERE&ctz=Africa/Dar_es_Salaam" style="border:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Payments: Stripe Checkout button (example) ===== -->
+<section id="payments" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Support / Sponsor</h2>
+      <p class="section-description">Make a secure donation or sponsorship payment using card or mobile.</p>
+    </div>
+
+    <div style="max-width:420px;margin:0 auto;display:grid;gap:0.75rem;">
+      <!-- Stripe (client-only) -->
+      <button id="stripePayBtn" class="btn btn-primary btn-lg">💳 Donate (Card)</button>
+
+      <!-- PayPal direct link placeholder -->
+      <a href="https://www.paypal.com/donate" target="_blank" class="btn btn-outline btn-lg">PayPal / Card</a>
+
+      <!-- Local mobile pay reminder -->
+      <div style="background:#fff;padding:0.75rem;border-radius:8px;border:1px solid var(--gray-200);text-align:center;">
+        <div style="font-weight:600;">Mobile Pay (Tanzania)</div>
+        <div style="margin-top:0.25rem;">Name: Emmanuel Brayson Mushi<br>+255 650 222 824</div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+<script>
+  // ====== CONFIG - REPLACE THESE ======
+  const EMAILJS_USER_ID = 'YOUR_EMAILJS_USER_ID';       // e.g. user_xxx (from EmailJS dashboard)
+  const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';        // e.g. service_xxx
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';      // e.g. template_xxx
+
+  // WhatsApp / Phone settings
+  const AUTHOR_PHONE_INTL = '+255650222824';           // public phone for WhatsApp link (no spaces)
+  const WHATSAPP_TEXT_PREFIX = 'Hello Emmanuel, I would like to request a booking from RotorFiles. Details:%0A';
+
+  // Google Calendar link template (user edits start/end). Example opens new event with title + description.
+  function createGoogleCalendarLink({title, details, location}) {
+    // Template: https://www.google.com/calendar/render?action=TEMPLATE&text=TITLE&details=DETAILS&location=LOCATION
+    const base = 'https://www.google.com/calendar/render?action=TEMPLATE';
+    const q = `&text=${encodeURIComponent(title)}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location||'')}`;
+    return base + q;
+  }
+
+  // STRIPE - example: calls your server endpoint to create checkout session
+  const STRIPE_PUBLISHABLE_KEY = 'pk_test_YOUR_PUBLISHABLE_KEY';
+  const CREATE_CHECKOUT_SESSION = '/create-checkout-session'; // replace with your server endpoint
+
+  // ====== INIT EmailJS ======
+  if (window.emailjs) {
+    emailjs.init(EMAILJS_USER_ID);
+  }
+
+  // ====== Booking form handler ======
+  function showBookingStatus(msg, type='success') {
+    const s = document.getElementById('bookingStatus');
+    s.style.display = 'block';
+    s.textContent = msg;
+    s.style.color = (type === 'success') ? 'green' : 'crimson';
+    setTimeout(()=> s.style.display = 'none', 8000);
+  }
+
+  async function handleBookingSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('bk_name').value.trim();
+    const email = document.getElementById('bk_email').value.trim();
+    const org  = document.getElementById('bk_org').value.trim();
+    const type = document.getElementById('bk_type').value;
+    const date = document.getElementById('bk_datetime').value.trim();
+    const message = document.getElementById('bk_message').value.trim();
+
+    // Prepare template params for EmailJS
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      organisation: org,
+      request_type: type,
+      preferred_date_time: date,
+      message: message,
+      author_name: 'Emmanuel Brayson Mushi',
+    };
+
+    // Try EmailJS first (client-side)
+    try {
+      if (!EMAILJS_USER_ID || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
+        throw new Error('EmailJS not configured. Please set your EmailJS IDs in the script.');
+      }
+
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+      showBookingStatus('Booking request sent — thank you! I will reply soon.', 'success');
+
+      // Optionally open WhatsApp to continue conversation (prefill)
+      const waText = `${WHATSAPP_TEXT_PREFIX}Name: ${name}%0AEmail: ${email}%0AType: ${type}%0APreferred: ${date}%0AMessage: ${encodeURIComponent(message)}`;
+      // open whatsapp web in new tab
+      window.open(`https://wa.me/${AUTHOR_PHONE_INTL.replace(/^\+/, '')}?text=${waText}`, '_blank');
+
+      // reset form
+      document.getElementById('bookingForm').reset();
+    } catch (err) {
+      console.error('Booking send error', err);
+      showBookingStatus('Could not send by EmailJS — opening WhatsApp so you can message directly.', 'error');
+      // fallback: open WhatsApp with prefilled message
+      const fallbackText = `${WHATSAPP_TEXT_PREFIX}Name: ${name}%0AEmail: ${email}%0AType: ${type}%0APreferred: ${date}%0AMessage: ${encodeURIComponent(message)}`;
+      window.open(`https://wa.me/${AUTHOR_PHONE_INTL.replace(/^\+/, '')}?text=${fallbackText}`, '_blank');
+    }
+  }
+
+  // ====== WhatsApp quick link updater ======
+  document.getElementById('whatsappQuick').addEventListener('click', function(ev){
+    ev.preventDefault();
+    const name = document.getElementById('bk_name').value.trim() || '—';
+    const email = document.getElementById('bk_email').value.trim() || '—';
+    const type = document.getElementById('bk_type').value;
+    const date = document.getElementById('bk_datetime').value.trim() || '—';
+    const message = document.getElementById('bk_message').value.trim() || '—';
+
+    const text = `${WHATSAPP_TEXT_PREFIX}Name: ${name}%0AEmail: ${email}%0AType: ${type}%0APreferred: ${date}%0AMessage: ${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${AUTHOR_PHONE_INTL.replace(/^\+/, '')}?text=${text}`;
+    window.open(url, '_blank');
+  });
+
+  // ====== Google Calendar link setup ======
+  document.getElementById('createGcEvent').addEventListener('click', function(ev){
+    ev.preventDefault();
+    const name = document.getElementById('bk_name').value.trim() || '';
+    const type = document.getElementById('bk_type').value || 'Booking';
+    const date = document.getElementById('bk_datetime').value.trim() || '';
+    const details = `Booking request from ${name}. Preferred: ${date}. Message: ${document.getElementById('bk_message').value.trim()}`;
+    const location = 'Virtual / Zoom or as agreed';
+
+    const link = createGoogleCalendarLink({
+      title: `${type} with Emmanuel Brayson`,
+      details,
+      location
+    });
+
+    window.open(link, '_blank');
+  });
+
+  // ====== Stripe Checkout Button (client only - needs server) ======
+  document.getElementById('stripePayBtn').addEventListener('click', async function(){
+    try {
+      // Call your backend to create a Stripe Checkout Session
+      const resp = await fetch(CREATE_CHECKOUT_SESSION, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({item: 'support', amount: 1000}) // example payload, change on server
+      });
+      const data = await resp.json();
+      if (!data.sessionId) throw new Error('No sessionId returned from server.');
+
+      const stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
+      await stripe.redirectToCheckout({ sessionId: data.sessionId });
+    } catch (err) {
+      console.error('Stripe error', err);
+      alert('Unable to start card payment. Please use PayPal or contact +255650222824.');
+    }
+  });
+
+</script>
+<!-- load Stripe.js -->
+<script src="https://js.stripe.com/v3/"></script>
+// POST /create-checkout-session
+// Request body: { item, amount }
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+app.post('/create-checkout-session', async (req,res)=>{
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: [{ price_data: { currency:'usd', product_data:{name:'Support RotorFiles'}, unit_amount: req.body.amount }, quantity:1 }],
+    mode: 'payment',
+    success_url: 'https://yourdomain.com/success?session_id={CHECKOUT_SESSION_ID}',
+    cancel_url: 'https://yourdomain.com/cancel'
+  });
+  res.json({ sessionId: session.id });
+});
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="footer-logo">
+                    <img src="https://i.postimg.cc/XqKLKSQV/rotorfiles-logo.png" alt="RotorFiles Logo" class="logo-image">
+                    RotorFiles
+                </a>
+                
+                <div class="footer-divider"></div>
+                
+                <p class="footer-info">Mwandishi: Emmanuel Brayson (Rotor Martin)</p>
+                <p class="footer-info">Simu: 0650222824 | WhatsApp: +255 610 222 824</p>
+                "Every story deserves to be told, every reader deserves to be moved."
+                
+                <div class="footer-divider"></div>
+                
+                <p class="footer-copyright">
+                    &copy; 2025 RotorFiles. Haki zote zimehifadhiwa.<br>
+                    
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-card">
+            <button class="auth-close" onclick="hideAuthModal()" aria-label="Funga">
+                &times;
+            </button>
+            <h2 class="auth-title" id="authFormTitle">Jisajili</h2>
+            
+            <form class="auth-form" id="authForm" onsubmit="handleAuth(event)">
+                <div class="form-group">
+                    <label for="authEmail" class="form-label">Barua Pepe</label>
+                    <input type="email" id="authEmail" class="form-input" 
+                           placeholder="example@email.com" required>
+                    <div class="form-error" id="emailError">Tafadhali weka barua pepe sahihi</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="authPassword" class="form-label">Nenosiri</label>
+                    <input type="password" id="authPassword" class="form-input" 
+                           placeholder="Weka nenosiri lako" required minlength="6">
+                    <div class="form-error" id="passwordError">Nenosiri lazima liwe na angalau herufi 6</div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full" id="authSubmitBtn">
+                    <span id="authButtonText">Jisajili</span>
+                    <span class="loading" id="authLoading" style="display: none;"></span>
+                </button>
+            </form>
+            
+            <p class="auth-switch" id="authSwitchText">
+                Tayari una akaunti? 
+                <button type="button" class="auth-switch-btn" onclick="toggleAuthMode()">
+                    Ingia
+                </button>
+            </p>
+        </div>
+    </div>
+
+    <!-- Reader Modal -->
+    <div class="reader-modal" id="readerModal">
+        <div class="reader-header">
+            <h2 class="reader-title" id="readerTitle">Kitabu</h2>
+            <button class="btn btn-danger" onclick="closeReader()">
+                ✕ Funga
+            </button>
+        </div>
+        <div class="reader-content" id="readerContent">
+            <!-- Book content will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon" id="toastIcon">✅</span>
+        <span class="toast-message" id="toastMessage"></span>
+        <button class="toast-close" onclick="hideToast()" aria-label="Funga">
+            &times;
+        </button>
+    </div>
+
+    <script>
+        // ===== CONFIGURATION =====
+        const CONFIG = {
+            appName: 'RotorFiles',
+            author: 'Emmanuel Brayson (Rotor Martin)',
+            version: '1.0.0',
+            contact: {
+                phone: '0650222824',
+                whatsapp: '+255610222824',
+                email: 'emmanuelbrayson@example.com'
+            }
+        };
+
+        // ===== STATE MANAGEMENT =====
+        let appState = {
+            currentUser: null,
+            isLoginMode: false,
+            currentBook: null,
+            isMobileMenuOpen: false
+        };
+
+        // ===== DOM ELEMENTS =====
+        const elements = {
+            // Header
+            header: document.getElementById('header'),
+            mobileMenuBtn: document.getElementById('mobileMenuBtn'),
+            mobileNav: document.getElementById('mobileNav'),
+            userInfo: document.getElementById('userInfo'),
+            userEmail: document.getElementById('userEmail'),
+            authButtons: document.getElementById('authButtons'),
+
+            // Auth Modal
+            authModal: document.getElementById('authModal'),
+            authForm: document.getElementById('authForm'),
+            authFormTitle: document.getElementById('authFormTitle'),
+            authEmail: document.getElementById('authEmail'),
+            authPassword: document.getElementById('authPassword'),
+            authSubmitBtn: document.getElementById('authSubmitBtn'),
+            authButtonText: document.getElementById('authButtonText'),
+            authLoading: document.getElementById('authLoading'),
+            authSwitchText: document.getElementById('authSwitchText'),
+            emailError: document.getElementById('emailError'),
+            passwordError: document.getElementById('passwordError'),
+
+            // Reader Modal
+            readerModal: document.getElementById('readerModal'),
+            readerTitle: document.getElementById('readerTitle'),
+            readerContent: document.getElementById('readerContent'),
+
+            // Toast
+            toast: document.getElementById('toast'),
+            toastIcon: document.getElementById('toastIcon'),
+            toastMessage: document.getElementById('toastMessage')
+        };
+
+        // ===== UTILITY FUNCTIONS =====
+        const utils = {
+            // Debounce function for performance
+            debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            },
+
+            // Validate email format
+            isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            },
+
+            // Format phone number
+            formatPhoneNumber(phone) {
+                return phone.replace(/(\d{3})(\d{3})(\d{4})/, '$1 $2 $3');
+            },
+
+            // Copy text to clipboard
+            async copyToClipboard(text) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    return true;
+                } catch (err) {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = text;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    return true;
+                }
+            },
+
+            // Generate unique ID
+            generateId() {
+                return Date.now().toString(36) + Math.random().toString(36).substr(2);
+            }
+        };
+
+        // ===== TOAST NOTIFICATION SYSTEM =====
+        const toast = {
+            show(message, type = 'success', duration = 5000) {
+                elements.toastMessage.textContent = message;
+                elements.toast.className = `toast ${type} active`;
+                
+                // Set icon based on type
+                const icons = {
+                    success: '✅',
+                    error: '❌',
+                    warning: '⚠️'
+                };
+                elements.toastIcon.textContent = icons[type] || '✅';
+
+                // Auto hide
+                if (duration > 0) {
+                    setTimeout(() => {
+                        this.hide();
+                    }, duration);
+                }
+            },
+
+            hide() {
+                elements.toast.classList.remove('active');
+            },
+
+            success(message, duration = 3000) {
+                this.show(message, 'success', duration);
+            },
+
+            error(message, duration = 5000) {
+                this.show(message, 'error', duration);
+            },
+
+            warning(message, duration = 4000) {
+                this.show(message, 'warning', duration);
+            }
+        };
+
+        // ===== AUTHENTICATION SYSTEM =====
+        const auth = {
+            // Show auth modal
+            show() {
+                elements.authModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            },
+
+            // Hide auth modal
+            hide() {
+                elements.authModal.classList.remove('active');
+                document.body.style.overflow = '';
+                this.resetForm();
+            },
+
+            // Toggle between login and signup modes
+            toggleMode() {
+                appState.isLoginMode = !appState.isLoginMode;
+                
+                if (appState.isLoginMode) {
+                    elements.authFormTitle.textContent = 'Ingia';
+                    elements.authButtonText.textContent = 'Ingia';
+                    elements.authSwitchText.innerHTML = `Hauna akaunti? <button type="button" class="auth-switch-btn" onclick="auth.toggleMode()">Jisajili</button>`;
+                } else {
+                    elements.authFormTitle.textContent = 'Jisajili';
+                    elements.authButtonText.textContent = 'Jisajili';
+                    elements.authSwitchText.innerHTML = `Tayari una akaunti? <button type="button" class="auth-switch-btn" onclick="auth.toggleMode()">Ingia</button>`;
+                }
+            },
+
+            // Reset form fields and errors
+            resetForm() {
+                elements.authForm.reset();
+                this.hideErrors();
+            },
+
+            // Hide all error messages
+            hideErrors() {
+                elements.emailError.classList.remove('show');
+                elements.passwordError.classList.remove('show');
+                elements.authEmail.classList.remove('error');
+                elements.authPassword.classList.remove('error');
+            },
+
+            // Show error for specific field
+            showError(field, message) {
+                const errorElement = elements[`${field}Error`];
+                const inputElement = elements[`auth${field.charAt(0).toUpperCase() + field.slice(1)}`];
+                
+                if (errorElement && inputElement) {
+                    errorElement.textContent = message;
+                    errorElement.classList.add('show');
+                    inputElement.classList.add('error');
+                }
+            },
+
+            // Validate form inputs
+            validateForm() {
+                const email = elements.authEmail.value.trim();
+                const password = elements.authPassword.value;
+                let isValid = true;
+
+                this.hideErrors();
+
+                // Validate email
+                if (!email) {
+                    this.showError('email', 'Barua pepe inahitajika');
+                    isValid = false;
+                } else if (!utils.isValidEmail(email)) {
+                    this.showError('email', 'Tafadhali weka barua pepe sahihi');
+                    isValid = false;
+                }
+
+                // Validate password
+                if (!password) {
+                    this.showError('password', 'Nenosiri linahitajika');
+                    isValid = false;
+                } else if (password.length < 6) {
+                    this.showError('password', 'Nenosiri lazima liwe na angalau herufi 6');
+                    isValid = false;
+                }
+
+                return isValid;
+            },
+
+            // Show loading state
+            setLoading(loading) {
+                if (loading) {
+                    elements.authSubmitBtn.disabled = true;
+                    elements.authButtonText.style.display = 'none';
+                    elements.authLoading.style.display = 'inline-block';
+                } else {
+                    elements.authSubmitBtn.disabled = false;
+                    elements.authButtonText.style.display = 'inline-block';
+                    elements.authLoading.style.display = 'none';
+                }
+            },
+
+            // Handle form submission
+            async handleSubmit(event) {
+                event.preventDefault();
+                
+                if (!this.validateForm()) {
+                    return;
+                }
+
+                this.setLoading(true);
+
+                try {
+                    // Simulate API call
+                    await this.mockAuthRequest();
+                    
+                    const email = elements.authEmail.value.trim();
+                    this.loginSuccess(email);
+                    
+                } catch (error) {
+                    toast.error(error.message);
+                } finally {
+                    this.setLoading(false);
+                }
+            },
+
+            // Mock authentication request
+            mockAuthRequest() {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        // Simulate random success/failure
+                        if (Math.random() > 0.1) { // 90% success rate
+                            resolve({ success: true });
+                        } else {
+                            reject(new Error(
+                                appState.isLoginMode 
+                                    ? 'Barua pepe au nenosiri si sahihi'
+                                    : 'Akaunti tayari ipo au hitilafu imetokea'
+                            ));
+                        }
+                    }, 1500);
+                });
+            },
+
+            // Handle successful login/signup
+            loginSuccess(email) {
+                appState.currentUser = { email };
+                localStorage.setItem('currentUser', JSON.stringify(appState.currentUser));
+                
+                elements.userEmail.textContent = email;
+                elements.userInfo.style.display = 'flex';
+                elements.authButtons.style.display = 'none';
+                
+                this.hide();
+                
+                const message = appState.isLoginMode 
+                    ? 'Umefanikiwa kuingia!' 
+                    : 'Umefanikiwa kujisajili!';
+                toast.success(message);
+            },
+
+            // Logout user
+            logout() {
+                appState.currentUser = null;
+                localStorage.removeItem('currentUser');
+                
+                elements.userInfo.style.display = 'none';
+                elements.authButtons.style.display = 'flex';
+                
+                toast.success('Umefanikiwa kutoka!');
+            },
+
+            // Check if user is logged in
+            checkAuthStatus() {
+                const savedUser = localStorage.getItem('currentUser');
+                if (savedUser) {
+                    try {
+                        appState.currentUser = JSON.parse(savedUser);
+                        elements.userEmail.textContent = appState.currentUser.email;
+                        elements.userInfo.style.display = 'flex';
+                        elements.authButtons.style.display = 'none';
+                    } catch (error) {
+                        console.error('Error parsing saved user:', error);
+                        localStorage.removeItem('currentUser');
+                    }
+                }
+            }
+        };
+
+        // ===== BOOK READER SYSTEM =====
+        const reader = {
+            // Book content data
+            books: {
+                1: {
+                    id: 1,
+                    title: "Your Life as a Car But Meant to Fly",
+                    author: "Emmanuel Brayson (Rotor Martin)",
+                    content: `
+                        <h3>Your Life as a Car But Meant to Fly</h3>
+                        <p><strong>Na: Emmanuel Brayson (Rotor Martin)</strong></p>
+                        
+                        <h4>Introduction</h4>
+                        <p>I believe human beings can be compared to vehicles- both cars and aircraft.</p>
+                        <p>Each has gears, systems, and stages. And just like a car has neutral, drive, park and reverse life too has phases that either move us forward or backward.</p>
+                        <p>But I didn’t stop there one day I sat and reflected on the deeper meanings of both machines – and I realized something powerful.</p>
+                        <p>We are born as cars – ordinary, grounded, limited. But some are called to fly. And if you are holding this book, then you are not just a reader, you are being invited to take off.</p>
+                        <p>Cars are bound to roads, traffic and physical limits. But planes rise above the noises, soars above storms, above traffic, and arrive faster, safer and with more vision. So, what’s the difference? what powers them and the altitude they’re meant to reach.</p>
+                        <p>This book is about taking back the steering wheel of your life – and eventually surrendering the wheel to the greatest pilot of all: God.</p>
+                        
+                        
+                        <div class="reader-note">
+                            <strong>Kumbuka:</strong> Kitabu hiki kinakupa mfano wa kuigwa wa jinsi ya kuendesha maisha yako kwa usalama na mafanikio.
+                        </div>
+                        
+                        <h4>CHAPTER ONE: NEUTRAL </h4>
+                        <p>The state of letting go neutral is when you stop pressing forward and start coasting. Sometimes its from exhaustion. Sometimes its from comfort. But in both cases, you’re no longer in control.</p>
+                        <p>It’s a little fascinating how many people let the life taking their control instead of controlling it.</p>
+                        <p>A car in neutral can not move on its own. It waits for external forces. If its on a slope, it rolls according to gravity. And in life, when you’re in neutral, you’re at the mercy of the environment – peer pressure, circumstances, fear and comfort zones.</p>
+                        <p>Characteristics of Neutral gear in a Car</p>
+                        <p><b>Does not move forward or backward by its own power</b></p>
+                        <p>When a car is in neutral, the engine is disconnected from the wheels – it can’t move unless pushed by an external force. In life this means you rely on others to move you.</p>
+                        <p>But here’s the danger “not everyone who pushes you has your best interest at heart”. Some do but, some might resent you. Others might lack the vision, wisdom, or direction that you have – and letting them steer your life can keep you from ever reaching your true potential.</p>
+                        <p>Bottom line: get your focus back. Take control. Because leaving your journey in the hands of wrong people is the fastest way to get lost. And if the luck will not be on you then you’ll be forever found.</p>
+                        
+                        <p><b>Biblical example of a Dreamer:</b></p>
+                        <p>When we look at the Bible we meet a young man named Joseph. He was given great visions from God – dreams of greatness, dreams of standing above his brothers, dreams of a unique destiny. But when he receives them, he was still young. And like a young person who doesn’t understand the danger of “travelling with everyone” he believed that everyone around him was safe to share these visions with.</p>
+                        <p>When he told his brothers, he didn’t realize that not everyone who listens to you wishes you well. Some were jealous, others feared his visions, and some saw them as threat. </p>
+                        <p>In short Joseph shared his visions with people who were not prepared to believe, understand, or protect them.</p>
+                        <p>This doesn’t mean his family was his enemy – far from it. But if you read carefully you’ll see there was only one person who wasn’t surprised by those dreams but quietly received them in his heart – his father, Jacob. He was the right person for those visions. As someone who has spiritual understanding, who loved joseph but also knew value of joseph and the weight and value of Gods dreams that he was carrying.</p>
+                        <p><b>Connection to the “Neutral gear”: </b></p>
+                        <p>when you are in the “neutral” of life, you’ll live relying on being pushed and like joseph, you allow others to help you move forward. Being pushed can also means waiting for approval. But if they are not the right people, even your visions can become a a source of hatred, rejection, and even betrayal – not just for money, but trough words, contempt, or plans to completely remove you from your spiritual path.</p>
+                        <p>The message? Not everyone has the right to hear your dreams. Not everyone has the authority to push your car. And not everyone has the eyes to see what God has shown you.</p>
+                        <p>To escape from this trap, apply the formula that I use concerning great visions “God commands. Human recommends” because there are people who will command you from not doing something while deep in your heart you know that this isn’t my plan its God.</p>
+                        <p>Allowing the engine to rest while idling neutral is often used when the engine is running, but the car isn’t moving – like when parked for a short while. In life this is what we call the comfort zone, it doesn’t feel painful, but it quietly holds you back. (like joseph brothers were his comfort and finally they hold him back).</p>
+                        <p>We could apply this in real life too you are not moving forward, not hustling, not knocking on doors that match your God given potentials – so how will opportunities find you? How will people recognize your value if you stay hidden waiting for miracle and things to change without serious efforts? Rest isn’t bad, living idle is. Get on, put drive by doing something worth it. </p>
+                        <p><b>Doesn’t Allow quick control in neutral</b></p>
+                        <p>You can’t accelerate or steer quickly – especially in emergencies. Likewise, in life, when you’re mentally or spiritually “neutral” you’re unable to make fast, wise decisions when trouble strikes. You see danger coming, but you’re too slow to respond. By the time you realize it, it’s too late – and that often leads to emotional crashes, missed opportunities or painful regrets. A passive life lacks the speed and strength to avoid life’s collisions.</p>
+                        <p><b>Can be easily pushed or roll down a slope</b></p>
+                        <p>When you’re in neutral, there’s no engine resistance – the car simply follows the terrain. In life this means you become reactive instead of intentional. You’ll find yourself easily manipulated or influenced to the wrong side, and constantly adjusting your direction based on what others think or say about you.</p>
+                        <p>You’ll become overly sensitive to opinions, fears, and trends not because you are weak but because you’ve surrendered control. When you’re not grounded in purpose, pressure decides your path. Without internal direction, external forces will drive your life.</p>
+                        <p><b>Biblical example from the father of faith:</b></p>
+                        <p>Abraham and his wife Sarah, sharing Gods promise, but facing human doubts. In the bible Abraham was given a powerful promise from God – that his wife Sarah would bear him a son, despite their old age. This was a vision of hope and future blessing directly from God.</p>
+                        <p>However, when Abraham shared this promise with Sarah, the human side of doubt and impatience surfaced. Instead of waiting on Gods timing, Sarah suggested that Abraham could sleep with her maidservant Hagar to have child. This decision led to complications, misunderstandings, and long-term consequences.  </p>
+                        <p>But thank God Abraham learned that lesson and didn’t afford to made a mistake when he was told to sacrifice that important and only child of their elderly Isaac so he chooses not to tell her wife. I pray for you to have a gift of being a fast, calculative and smart learner to not repeat the mistakes you’ve done in your current life and get back your control again because some choices are hard and will be understood when you take that risk.</p>
+                        <p>This story shows that even when we receive clear promises from God, human doubts and impatience can lead us to take matters into our own hands sometimes involving others in ways God didn’t intend. And that is a very risky move when you’re on the road(life).</p>
+                        <p><b>Connection to the “Neutral gear” concept: </b></p>
+                        <p>just like being in neutral gear, where you rely on external forces to move you, Abraham and surahs story shows how leaning on human plans rather than trusting Gods timing can lead to losing control of the journey. Sometimes, in trying to push forward without Gods guidance, we invite confusion and challenges.</p>
+                        <p><b>The lesson?</b> Trusting God fully means waiting on his timing and not involving others prematurely in your divine purpose, not everyone will align with Gods perfect plan for you.</p>
+                        <p>Being in neutral too long while moving can lead to loss of control. This is the stage where everyday begins to drive you – instead of you driving your life. We can learn through;</p>
+                        <p><b>Biblical example of Israelites in the wilderness<b/></p>
+                        <p>This is a real-life example of the “not for long term driving state”. Living your life for too long, letting others or circumstances take control, is very dangerous move. Its like handling your car to a learner driver at night to unknown highway while you sit in the passenger seat.</p>
+                        <p>That’s exactly what life in neutral feels like: directionless, unsafe, and risky. When you allow others – the crowd, to choose your road, even if it’s by mistake, you’ll end up paying the price. And if their decisions were intentional? You may never even realize it until its too late. Living on neutral is not living – its drifting (like Israelites they drifted recklessly)</p>
+                        
+                        <h4>Sura ya Pili: Injini - Moyo Wako</h4>
+                        <p>Injini ni moyo wa gari. Bila injini inayofanya kazi vizuri, gari halitasogea. Vivyo hivyo, moyo wako - kiroho na kimwili - ni nguvu inayokusukuma mbele maishani.</p>
+                        
+                        <p>Unahitaji kutunza moyo wako. Ulishaji vizuri, mazoezi, na kupumzika kwa kutosha ni kama mafuta ya gari - yanahakikisha kila kitu kinafanya kazi vizuri. Ikiwa utapuuza afya yako, itakuwa kama gari lenye injini iliyochakaa - utakwama njiani.</p>
+                        
+                        <h4>Hitimisho</h4>
+                        <p>Maisha yako ni safari. Gari lako - mwili na roho yako - linahitaji matunzo. Endesha kwa makini, fuata kanuni za barabarani, na usisahau kufurahia mandhari njiani.</p>
+                        
+                        <p><strong>Kumbuka:</strong> Si kasi unavyoenda inayohesabu, bali usalama unavyofika. Safari njema!</p>
+                        
+                        <div class="reader-note">
+                            <strong>Nota ya Mwandishi:</strong> Kitabu hiki kimekusanywa kutoka kwa uzoefu na tafakari za maisha. Natumai kitakusaidia kuona maisha yako kwa mtazamo mpya na wenye maana zaidi. - Rotor Martin
+                        </div>
+                    `
+                },
+                2: {
+                    id: 2,
+                    title: "Nguvu ya Kujizuia",
+                    author: "Emmanuel Brayson (Rotor Martin)",
+                    content: `
+                        <h3>Nguvu ya Kujizuia</h3>
+                        <p><strong>Na: Emmanuel Brayson (Rotor Martin)</strong></p>
+                        
+                        <h4>Utangulizi</h4>
+                        <p>Kujizuia sio uwezo tu, bali ni sanaa. Ni uwezo wa kudhibiti matamanio, hisia, na matendo yetu. Katika dunia ambayo kila kitu kinapatikana kwa haraka na kwa urahisi, kujizuia kunakuwa nguvu muhimu zaidi kuliko hapo awali.</p>
+                        
+                        <p>Watu wengi wanaamini kwamba uhuru ni kufanya unachotaka wakati wowote. Lakini uhuru wa kweli unakuja pale unapojua kutokufanya mambo fulani, hata kama unaweza. Hiyo ndio nguvu ya kujizuia.</p>
+                        
+                        <div class="reader-note">
+                            <strong>Fun Fact:</strong> Utafiti unaonesha kuwa watu wenye kujizuia wana uwezo mkubwa wa kufanikiwa maishani kuliko wale wasiojizuia.
+                        </div>
+                        
+                        <h4>Sura ya Kwanza: Ufafanuzi wa Kujizuia</h4>
+                        <p>Kujizuia ni uwezo wa kusimamisha au kudhibiti matamanio na hisia zetu. Ni kama kuvuta breki kabla ya hatari - unaona kitu kinachoweza kukudhuru, na unaamua kusimama badala ya kuendelea.</p>
+                        
+                        <p>Watu wenye kujizuia wanajua jinsi ya:</p>
+                        <p>• Kusubiri tuzo badala ya kutaka kila kitu mara moja</p>
+                        <p>• Kudhibiti hasira badala ya kulipiza kisasi</p>
+                        <p>• Kusema "Hapana" kwa anayejaribu kuwapotosha</p>
+                        <p>• Kuweka muda wa kufanya kazi kabla ya kucheza</p>
+                        
+                        <h4>Sura ya Pili: Faida za Kujizuia</h4>
+                        <p>Kujizuia kunaleta faida nyingi maishani:</p>
+                        
+                        <p><strong>1. Mafanikio ya Kiuchumi</strong></p>
+                        <p>Watu wanaojizuia wanaweza kuokoa pesa badala ya kutumia kila kitu wanachopata. Wanaweza kusubiri na kujipatia vitu bora badala ya kununua vitu vya bei rahisi ambavyo havitadumu.</p>
+                        
+                        <p><strong>2. Afya Bora</strong></p>
+                        <p>Kujizuia kunasaidia kula vizuri na kufanya mazoezi hata wakati ambapo tungependa kukaa tu na kula vyakula visivyo na afya. Watu wenye kujizuia wana afya bora na maisha marefu.</p>
+                        
+                        <h4>Hitimisho</h4>
+                        <p>Kujizuia ni moja ya vipawa vikubwa unavyoweza kujipatia. Sio kitu unachozaliwa nacho - ni kitu unachokijenga kwa muda na juhudi.</p>
+                        
+                        <p>Kumbuka: Kila mara unakuwa na fursa ya kujizuia ni fursa ya kujijenga. Maamuzi madogo ya leo yanaweza kuleta mabadiliko makubwa kesho.</p>
+                        
+                        <div class="reader-note">
+                            <strong>Zoezi la Kila Siku:</strong> Chagua moja ya mambo unayotaka kujizuia leo. Fanya hivyo kwa siku 21 mfululizo - ndipo itakapokuwa tabia. Unaweza kufanya hivi! - Rotor Martin
+                        </div>
+                
+                        
+                    `
+                },
+                3: {
+                    id: 3,
+                    title: "Kitabu cha Tatu",
+                    author: "Emmanuel Brayson (Rotor Martin)",
+                    content: `
+                        <h3>Kitabu cha Tatu</h3>
+                        <p><strong>Na: Emmanuel Brayson (Rotor Martin)</strong></p>
+                        
+                        <h4>Inakuja Hivi Karibuni</h4>
+                        <p>Kitabu hiki kipya kinatumwa kwenye michango na kinatarajiwa kukamilika hivi karibuni. Ni mradi ambao ninaufanyia kazi kwa bidii na upendo mkubwa.</p>
+                        
+                        <div class="reader-note">
+                            <strong>Karibu!</strong> Kitabu hiki kinakuja na mafunzo mapya na ya kina ambayo yatakusaidia zaidi katika safari yako ya maisha.
+                        </div>
+                        
+                        <p>Kitabu hiki kitashughulikia mada muhimu za:</p>
+                        <p>• Jinsi ya kufuata ndoto zako bila kuyaacha maadili yako</p>
+                        <p>• Namna ya kujenga uhusiano mzuri na watu wengine</p>
+                        <p>• Jinsi ya kushinda changamoto za maisha</p>
+                        <p>• Namna ya kuwa mwelekezi kwa wengine</p>
+                        
+                        <h4>Subiri Habari Njema</h4>
+                        <p>Fuatilia ukurasa huu kwa habari za sasa za kitabu hiki. Nitawajulisha wakati kitabu kitakapokuwa tayari.</p>
+                        
+                        <p>Kwa sasa, endelea kusoma vitabu vilivyopo na kuniambia maoni yako. Maoni yako yanasaidia sana katika kuandika vitabu vipya!</p>
+                        
+                        <div class="reader-note">
+                            <strong>Asante:</strong> Napenda kuwashukuru sana wote mnaoninunga mkono na kusoma vitabu vyangu. Ninyi ndio kipaji changu cha kuendelea kuandika. Mungu awabariki! - Rotor Martin
+                        </div>
+                        
+                        <h4>Wasiliana Nami</h4>
+                        <p>Kama una maoni au maswali kuhusu kitabu hiki kinachokuja, tafadhali wasiliana nami:</p>
+                        <p>📞 Simu/SMS: 0650222824</p>
+                        <p>💬 WhatsApp: +255 610 222 824</p>
+                    `
+                }
+            },
+
+            // Open book in reader
+            open(bookId) {
+                const book = this.books[bookId];
+                if (!book) {
+                    toast.error('Kitabu hakijapatikana');
+                    return;
+                }
+
+                appState.currentBook = book;
+                elements.readerTitle.textContent = book.title;
+                elements.readerContent.innerHTML = book.content;
+                elements.readerModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                // Track reading activity
+                this.trackReading(bookId);
+            },
+
+            // Close reader
+            close() {
+                elements.readerModal.classList.remove('active');
+                document.body.style.overflow = '';
+                appState.currentBook = null;
+            },
+
+            // Track reading activity
+            trackReading(bookId) {
+                const readingHistory = JSON.parse(localStorage.getItem('readingHistory') || '[]');
+                const readingEvent = {
+                    bookId,
+                    timestamp: new Date().toISOString(),
+                    duration: 0 // Could be updated when closing
+                };
+                
+                readingHistory.unshift(readingEvent);
+                // Keep only last 10 readings
+                if (readingHistory.length > 10) {
+                    readingHistory.pop();
+                }
+                
+                localStorage.setItem('readingHistory', JSON.stringify(readingHistory));
+            }
+        };
+
+        // ===== APP INITIALIZATION =====
+        const app = {
+            init() {
+                this.initEventListeners();
+                this.restoreAppState();
+                auth.checkAuthStatus();
+                toast.success('Karibu kwenye RotorFiles!');
+                
+                console.log(`${CONFIG.appName} v${CONFIG.version} initialized`);
+            },
+
+            // Initialize event listeners
+            initEventListeners() {
+                // Header scroll effect
+                window.addEventListener('scroll', utils.debounce(() => {
+                    this.handleScroll();
+                }, 10));
+
+                // Mobile menu
+                elements.mobileMenuBtn.addEventListener('click', () => {
+                    this.toggleMobileMenu();
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (event) => {
+                    if (!elements.mobileNav.contains(event.target) && 
+                        !elements.mobileMenuBtn.contains(event.target) &&
+                        appState.isMobileMenuOpen) {
+                        this.closeMobileMenu();
+                    }
+                });
+
+                // Close modals with Escape key
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') {
+                        if (elements.authModal.classList.contains('active')) {
+                            auth.hide();
+                        }
+                        if (elements.readerModal.classList.contains('active')) {
+                            reader.close();
+                        }
+                    }
+                });
+
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const target = document.querySelector(anchor.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                            this.closeMobileMenu();
+                        }
+                    });
+                });
+
+                // Update active nav link based on scroll position
+                window.addEventListener('scroll', utils.debounce(() => {
+                    this.updateActiveNavLink();
+                }, 100));
+            },
+
+            // Handle scroll events
+            handleScroll() {
+                const scrolled = window.scrollY > 50;
+                elements.header.classList.toggle('scrolled', scrolled);
+            },
+
+            // Toggle mobile menu
+            toggleMobileMenu() {
+                appState.isMobileMenuOpen = !appState.isMobileMenuOpen;
+                elements.mobileNav.classList.toggle('active', appState.isMobileMenuOpen);
+                
+                // Prevent body scroll when menu is open
+                document.body.style.overflow = appState.isMobileMenuOpen ? 'hidden' : '';
+            },
+
+            // Close mobile menu
+            closeMobileMenu() {
+                appState.isMobileMenuOpen = false;
+                elements.mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            },
+
+            // Update active navigation link based on scroll position
+            updateActiveNavLink() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let currentSection = '';
+                const scrollPosition = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            },
+
+            // Restore app state from localStorage
+            restoreAppState() {
+                // Additional state restoration can be added here
+            }
+        };
+
+        // ===== SHARING FUNCTIONALITY =====
+        const sharing = {
+            async shareApp() {
+                const shareData = {
+                    title: 'RotorFiles - Soma Vitabu Bure',
+                    text: 'Soma vitabu vya Emmanuel Brayson (Rotor Martin) bure kabisa kwenye RotorFiles!',
+                    url: window.location.href
+                };
+
+                try {
+                    if (navigator.share) {
+                        await navigator.share(shareData);
+                        toast.success('Asante kwa kushiriki!');
+                    } else {
+                        await utils.copyToClipboard(window.location.href);
+                        toast.success('Link imenakiliwa! Sambaza kwa marafiki zako.');
+                    }
+                } catch (error) {
+                    if (error.name !== 'AbortError') {
+                        toast.error('Hitilafu imetokea wakati wa kushiriki');
+                    }
+                }
+            },
+
+            shareBook(bookId) {
+                const book = reader.books[bookId];
+                if (!book) return;
+
+                const shareData = {
+                    title: `Soma "${book.title}" kwenye RotorFiles`,
+                    text: `Nimekuta kitabu kizuri "${book.title}" cha ${book.author} kwenye RotorFiles. Soma bure!`,
+                    url: window.location.href
+                };
+
+                if (navigator.share) {
+                    navigator.share(shareData);
+                } else {
+                    utils.copyToClipboard(window.location.href);
+                    toast.success(`Link ya "${book.title}" imenakiliwa!`);
+                }
+            }
+        };
+
+        // ===== GLOBAL FUNCTIONS =====
+        // These functions are exposed to HTML onclick handlers
+        window.showAuthModal = () => auth.show();
+        window.hideAuthModal = () => auth.hide();
+        window.toggleAuthMode = () => auth.toggleMode();
+        window.handleAuth = (event) => auth.handleSubmit(event);
+        window.logout = () => auth.logout();
+
+        window.openBook = (bookId) => reader.open(bookId);
+        window.closeReader = () => reader.close();
+
+        window.shareApp = () => sharing.shareApp();
+        window.scrollToContact = () => {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        window.hideToast = () => toast.hide();
+        window.closeMobileMenu = () => app.closeMobileMenu();
+
+        // ===== APP START =====
+        document.addEventListener('DOMContentLoaded', () => {
+            app.init();
+        });
+
+        // Service Worker Registration (for PWA capabilities)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
