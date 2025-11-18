@@ -8,7 +8,7 @@
     <meta name="author" content="Emmanuel Brayson (Rotor Martin)">
     <title>RotorFiles - Soma Vitabu Bila Malipo</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/XqKLKSQV/rotorfiles-logo.png">
-    
+    <meta name="theme-color" content="#2563eb">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="RotorFiles - Soma Vitabu Bila Malipo">
     <meta property="og:description" content="Soma vitabu vya Emmanuel Brayson (Rotor Martin) bure kabisa">
@@ -254,6 +254,39 @@
         .btn-danger:hover {
             background: #dc2626;
             border-color: #dc2626;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+
+        .btn-success:hover {
+            background: #059669;
+            border-color: #059669;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+
+        .btn-success:hover {
+            background: #059669;
+            border-color: #059669;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+
+        .btn-success:hover {
+            background: #059669;
+            border-color: #059669;
         }
 
         .btn-sm {
@@ -1448,7 +1481,7 @@
                 <p class="support-description">
                     Partner with me in creating value, wisdom, and free resources for learners worldwide.
                 </p>
-                <a href="https://www.paypal.com/donate" target="_blank" class="btn btn-primary btn-full">
+                <a href="https://www.paypal.com/donate" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
                     💳 Donate via PayPal / Card
                 </a>
                 <p class="support-description small-text">
@@ -1636,7 +1669,7 @@
       <button id="stripePayBtn" class="btn btn-primary btn-lg">💳 Donate (Card)</button>
 
       <!-- PayPal direct link placeholder -->
-      <a href="https://www.paypal.com/donate" target="_blank" class="btn btn-outline btn-lg">PayPal / Card</a>
+      <a href="https://www.paypal.com/donate" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">PayPal / Card</a>
 
       <!-- Local mobile pay reminder -->
       <div style="background:#fff;padding:0.75rem;border-radius:8px;border:1px solid var(--gray-200);text-align:center;">
@@ -1783,19 +1816,36 @@
 </script>
 <!-- load Stripe.js -->
 <script src="https://js.stripe.com/v3/"></script>
-// POST /create-checkout-session
-// Request body: { item, amount }
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-app.post('/create-checkout-session', async (req,res)=>{
-  const session = await stripe.checkout.sessions.create({
-    payment_method_types: ['card'],
-    line_items: [{ price_data: { currency:'usd', product_data:{name:'Support RotorFiles'}, unit_amount: req.body.amount }, quantity:1 }],
-    mode: 'payment',
-    success_url: 'https://yourdomain.com/success?session_id={CHECKOUT_SESSION_ID}',
-    cancel_url: 'https://yourdomain.com/cancel'
-  });
-  res.json({ sessionId: session.id });
-});
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Wasiliana</h2>
+          <p class="section-description">Wasiliana moja kwa moja kwa maombi, ushauri, au ushirikiano.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h3 class="contact-title">Barua Pepe</h3>
+            <p class="contact-info">emmanuelbrayson@example.com</p>
+            <a href="mailto:emmanuelbrayson@example.com" class="btn btn-outline">Tuma Email</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">💬</div>
+            <h3 class="contact-title">WhatsApp</h3>
+            <p class="contact-info">+255 650 222 824</p>
+            <a href="https://wa.me/255650222824" target="_blank" rel="noopener noreferrer" class="btn btn-success">Fungua WhatsApp</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3 class="contact-title">Simu</h3>
+            <p class="contact-info">0650 222 824</p>
+            <a href="tel:+255650222824" class="btn btn-outline">Piga Simu</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <!-- Footer -->
@@ -1810,7 +1860,7 @@ app.post('/create-checkout-session', async (req,res)=>{
                 <div class="footer-divider"></div>
                 
                 <p class="footer-info">Mwandishi: Emmanuel Brayson (Rotor Martin)</p>
-                <p class="footer-info">Simu: 0650222824 | WhatsApp: +255 610 222 824</p>
+                <p class="footer-info">Simu: 0650222824 | WhatsApp: +255 650 222 824</p>
                 "Every story deserves to be told, every reader deserves to be moved."
                 
                 <div class="footer-divider"></div>
@@ -2494,6 +2544,7 @@ app.post('/create-checkout-session', async (req,res)=>{
             toggleMobileMenu() {
                 appState.isMobileMenuOpen = !appState.isMobileMenuOpen;
                 elements.mobileNav.classList.toggle('active', appState.isMobileMenuOpen);
+                elements.mobileMenuBtn.setAttribute('aria-expanded', appState.isMobileMenuOpen ? 'true' : 'false');
                 
                 // Prevent body scroll when menu is open
                 document.body.style.overflow = appState.isMobileMenuOpen ? 'hidden' : '';
